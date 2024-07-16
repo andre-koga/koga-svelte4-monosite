@@ -1,9 +1,12 @@
 <script lang="ts">
+	import ScrollToTop from '$ui/ScrollToTop.svelte';
 	import UnimportantLink from '$ui/UnimportantLink.svelte';
 </script>
 
+<ScrollToTop />
+
 <footer
-	class="flex h-screen flex-col justify-between bg-gradient-to-b from-stone-50 to-stone-200 px-4 pb-20 pt-40 md:px-8 lg:px-12 dark:from-gray-950 dark:to-gray-800"
+	class="flex h-screen flex-col justify-between bg-gradient-to-b from-stone-50 to-stone-200 px-4 pb-20 pt-40 sm:px-12 lg:px-20 dark:from-gray-950 dark:to-gray-800"
 >
 	<div>
 		<p class="pb-8 text-center text-sm text-stone-300">the links don't work yet!</p>

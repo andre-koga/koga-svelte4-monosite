@@ -25,10 +25,8 @@
 	}
 </script>
 
-<ScrollToTop />
-
 <header
-	class="header relative z-10 grid grid-cols-3 flex-wrap place-items-center gap-4 px-6 py-12 lowercase sm:gap-8 sm:px-12 md:px-20 md:py-16"
+	class="header relative z-10 grid grid-cols-3 place-items-center gap-4 px-6 py-12 lowercase sm:gap-8 sm:px-12 md:px-20 md:py-16"
 >
 	<a
 		href="/projects"
@@ -49,12 +47,15 @@
 			<Sun class="h-5 w-5" />
 		{/if}
 	</button>
-	<pages-menu class="grid w-full grid-cols-2 gap-2 sm:gap-4 md:flex md:flex-wrap">
-		{#each pageLinks as { href, text }, i}
-			<HeaderPageLink {href} {text} />
-		{/each}
-	</pages-menu>
 </header>
+
+<pages-menu
+	class="grid w-full grid-cols-2 gap-2 rounded-lg bg-white p-1 sm:gap-4 md:flex md:flex-wrap"
+>
+	{#each pageLinks as { href, text }, i}
+		<HeaderPageLink {href} {text} />
+	{/each}
+</pages-menu>
 
 <!-- Big screen only -->
 <!-- <pc-header
