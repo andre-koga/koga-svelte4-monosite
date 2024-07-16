@@ -6,10 +6,9 @@
 <ScrollToTop />
 
 <footer
-	class="flex h-screen flex-col justify-between bg-gradient-to-b from-stone-50 to-stone-200 px-4 pb-20 pt-40 sm:px-12 lg:px-20 dark:from-gray-950 dark:to-gray-800"
+	class="relative flex h-[90vh] flex-col justify-end gap-4 bg-gradient-to-b from-stone-50 to-stone-200 px-4 pb-20 sm:px-12 lg:px-20 dark:from-gray-950 dark:to-gray-800"
 >
 	<div>
-		<p class="pb-8 text-center text-sm text-stone-300">the links don't work yet!</p>
 		<p class="rounded-sm pb-6 font-display text-2xl font-bold">Other Resources</p>
 		<div class="grid grid-cols-2 justify-start gap-4 sm:grid-cols-2 lg:mr-[50%] lg:grid-cols-3">
 			<a href="/">Repository</a>

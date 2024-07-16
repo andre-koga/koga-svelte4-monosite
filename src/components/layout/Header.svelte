@@ -38,10 +38,10 @@
 	<WebsiteIcon />
 	<button
 		on:click={toggleTheme}
-		class="flex gap-1.5 place-self-center justify-self-end rounded-lg bg-indigo-900 px-1.5 py-1 text-darktext transition-transform hover:scale-95 sm:p-1.5 dark:bg-amber-400 dark:text-lighttext"
+		class="flex gap-1.5 place-self-center justify-self-end rounded-lg bg-darkbg px-1.5 py-1 text-darktext transition-transform hover:scale-95 sm:p-1.5 dark:bg-amber-400 dark:text-lighttext"
 		aria-label="Toggle theme"
 	>
-		<Moon class="h-5 w-5 text-amber-400" /><Sun class="h-5 w-5 text-indigo-900" />
+		<Moon class="h-5 w-5" /><Sun class="h-5 w-5" />
 	</button>
 	<pages-menu
 		class="col-span-3 grid w-full grid-cols-2 gap-2 rounded-xl bg-darkbg bg-opacity-5 p-2 md:flex md:flex-wrap dark:bg-lightbg dark:bg-opacity-5"
@@ -84,7 +84,7 @@
 	</right-nav>
 </pc-header> -->
 
-<gradient class="absolute left-0 top-0 h-32 w-full bg-lightbg dark:bg-darkbg"> </gradient>
+<gradient class="absolute left-0 top-0 h-6 w-full bg-lightbg dark:bg-darkbg"> </gradient>
 <gradient
-	class="absolute left-0 top-32 h-[20vh] w-full bg-gradient-to-b from-lightbg to-transparent dark:from-darkbg"
+	class="absolute left-0 top-6 h-[40vh] w-full bg-gradient-to-b from-lightbg to-transparent dark:from-darkbg"
 ></gradient>

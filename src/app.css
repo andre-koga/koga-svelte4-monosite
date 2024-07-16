@@ -2,174 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-	--background-color: #ffffff;
-	--text-color: #000000;
-	--accent-color: #007bff;
-}
-
-[data-theme='dark'] {
-	--background-color: #121212;
-	--text-color: #ffffff;
-	--accent-color: #0d6efd;
-} */
-
 /* customize the scrollbar */
 ::-webkit-scrollbar {
 	width: 12px;
 }
 ::-webkit-scrollbar-track {
-	@apply bg-stone-50 dark:bg-gray-950;
+	@apply bg-stone-50 dark:bg-slate-950;
 }
 ::-webkit-scrollbar-thumb {
-	@apply rounded-lg bg-stone-400 dark:bg-gray-500;
+	@apply rounded-lg bg-stone-400 dark:bg-slate-500;
 }
 ::-webkit-scrollbar-thumb:hover {
-	@apply bg-stone-500 dark:bg-gray-600;
+	@apply bg-stone-500 dark:bg-slate-600;
 }
 
 html {
 	scroll-behavior: smooth;
-}
-
-body {
-	@apply bg-stone-50;
-}
-
-aside {
-	@apply bg-stone-50 dark:bg-stone-900;
-}
-
-.button-outline {
-	@apply rounded border border-slate-800 px-1 transition-all;
-}
-/* 
-.m {
-	@apply m-0.5 md:m-1 lg:m-2;
-}
-
-.p {
-	@apply p-4 px-6 md:px-12 md:py-6 lg:px-20 lg:py-8;
-}
-
-.-m {
-	@apply -m-0.5 md:-m-1 lg:-m-2;
-} */
-
-section {
-	@apply min-h-[80vh];
-}
-
-.bg-light {
-	background-position: center;
-	background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.5) 1px, transparent 0);
-	background-size: 12.5vmin 6vmin;
-}
-
-.bg-dark {
-	background-position: center;
-	background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.5) 1px, transparent 0);
-	background-size: 12.5vmin 6vmin;
-}
-
-.gradient-blur {
-	position: absolute;
-	z-index: 5;
-	inset: auto 0 0 0;
-	top: 0;
-	height: 150%;
-	pointer-events: none;
-}
-.gradient-blur > div,
-.gradient-blur::before,
-.gradient-blur::after {
-	position: absolute;
-	inset: 0;
-}
-.gradient-blur::before {
-	content: '';
-	z-index: 1;
-	backdrop-filter: blur(0.6px);
-	mask: linear-gradient(
-		to top,
-		rgba(0, 0, 0, 0) 0%,
-		rgba(0, 0, 0, 1) 12.5%,
-		rgba(0, 0, 0, 1) 25%,
-		rgba(0, 0, 0, 1) 37.5%
-	);
-}
-.gradient-blur > div:nth-of-type(1) {
-	z-index: 2;
-	backdrop-filter: blur(0.8px);
-	mask: linear-gradient(
-		to top,
-		rgba(0, 0, 0, 0) 12.5%,
-		rgba(0, 0, 0, 1) 25%,
-		rgba(0, 0, 0, 1) 37.5%,
-		rgba(0, 0, 0, 0) 50%
-	);
-}
-.gradient-blur > div:nth-of-type(2) {
-	z-index: 3;
-	backdrop-filter: blur(1.1px);
-	mask: linear-gradient(
-		to top,
-		rgba(0, 0, 0, 0) 25%,
-		rgba(0, 0, 0, 1) 37.5%,
-		rgba(0, 0, 0, 1) 50%,
-		rgba(0, 0, 0, 0) 62.5%
-	);
-}
-.gradient-blur > div:nth-of-type(3) {
-	z-index: 4;
-	backdrop-filter: blur(1.3px);
-	mask: linear-gradient(
-		to top,
-		rgba(0, 0, 0, 0) 37.5%,
-		rgba(0, 0, 0, 1) 50%,
-		rgba(0, 0, 0, 1) 62.5%,
-		rgba(0, 0, 0, 0) 75%
-	);
-}
-.gradient-blur > div:nth-of-type(4) {
-	z-index: 5;
-	backdrop-filter: blur(1.6px);
-	mask: linear-gradient(
-		to top,
-		rgba(0, 0, 0, 0) 50%,
-		rgba(0, 0, 0, 1) 62.5%,
-		rgba(0, 0, 0, 1) 75%,
-		rgba(0, 0, 0, 0) 87.5%
-	);
-}
-.gradient-blur > div:nth-of-type(5) {
-	z-index: 6;
-	backdrop-filter: blur(1.9px);
-	mask: linear-gradient(
-		to top,
-		rgba(0, 0, 0, 0) 62.5%,
-		rgba(0, 0, 0, 1) 75%,
-		rgba(0, 0, 0, 1) 87.5%,
-		rgba(0, 0, 0, 0) 100%
-	);
-}
-.gradient-blur > div:nth-of-type(6) {
-	z-index: 7;
-	backdrop-filter: blur(2.1px);
-	mask: linear-gradient(
-		to top,
-		rgba(0, 0, 0, 0) 75%,
-		rgba(0, 0, 0, 1) 87.5%,
-		rgba(0, 0, 0, 1) 100%
-	);
-}
-.gradient-blur::after {
-	content: '';
-	z-index: 8;
-	backdrop-filter: blur(10px);
-	mask: linear-gradient(to top, rgba(0, 0, 0, 0) 87.5%, rgba(0, 0, 0, 1) 100%);
-}
-
-.category {
-	@apply rounded-lg bg-stone-50 px-2 font-medium text-black;
 }
