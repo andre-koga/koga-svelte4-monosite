@@ -47,15 +47,14 @@
 			<Sun class="h-5 w-5" />
 		{/if}
 	</button>
+	<pages-menu
+		class="col-span-3 grid w-full grid-cols-2 gap-2 rounded-xl bg-darkbg bg-opacity-10 p-2 md:flex md:flex-wrap dark:bg-lightbg dark:bg-opacity-10"
+	>
+		{#each pageLinks as { href, text }, i}
+			<HeaderPageLink {href} {text} />
+		{/each}
+	</pages-menu>
 </header>
-
-<pages-menu
-	class="grid w-full grid-cols-2 gap-2 rounded-lg bg-white p-1 sm:gap-4 md:flex md:flex-wrap"
->
-	{#each pageLinks as { href, text }, i}
-		<HeaderPageLink {href} {text} />
-	{/each}
-</pages-menu>
 
 <!-- Big screen only -->
 <!-- <pc-header
