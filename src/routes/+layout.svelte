@@ -23,7 +23,7 @@
 >
 	<Header />
 
-	<main class="z-0 min-h-screen">
+	<main class="relative z-0 min-h-screen">
 		<slot />
 	</main>
 

@@ -26,7 +26,7 @@
 </script>
 
 <header
-	class="header relative z-10 grid grid-cols-3 place-items-center gap-4 px-6 py-12 lowercase sm:gap-8 sm:px-12 md:px-20 md:py-16"
+	class="header relative z-10 grid grid-cols-3 place-items-center gap-8 px-6 py-12 lowercase sm:gap-12 sm:px-12 md:px-20 md:py-16"
 >
 	<a
 		href="/projects"
@@ -86,5 +86,5 @@
 
 <gradient class="absolute left-0 top-0 h-32 w-full bg-lightbg dark:bg-darkbg"> </gradient>
 <gradient
-	class="absolute left-0 top-32 h-[40vh] w-full bg-gradient-to-b from-lightbg to-transparent dark:from-darkbg"
+	class="absolute left-0 top-32 h-[20vh] w-full bg-gradient-to-b from-lightbg to-transparent dark:from-darkbg"
 ></gradient>
