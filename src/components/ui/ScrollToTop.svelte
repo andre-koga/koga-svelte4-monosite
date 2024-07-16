@@ -28,7 +28,7 @@
 
 <!-- Scroll to Top Button -->
 <top-arrow
-	class="scroll-to-top sm:left sticky bottom-6 left-6 z-50 hover:scale-90 sm:bottom-12 sm:left-12 md:bottom-16 md:left-20 {showButton
+	class="scroll-to-top sm:left sticky bottom-6 left-6 z-50 hover:scale-95 sm:bottom-12 sm:left-12 md:bottom-16 md:left-20 {showButton
 		? 'show'
 		: ''}"
 >

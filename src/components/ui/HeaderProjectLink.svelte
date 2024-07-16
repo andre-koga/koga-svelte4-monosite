@@ -8,6 +8,6 @@
 <a
 	{title}
 	style="background-image: linear-gradient(to right, {gradient.join(', ')});"
-	class="rounded-lg px-2 text-base uppercase text-black transition-transform hover:scale-90"
+	class="rounded-lg px-2 text-base uppercase text-black transition-transform hover:scale-95"
 	{href}>{text}</a
 >

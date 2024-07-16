@@ -31,14 +31,14 @@
 	<a
 		href="/projects"
 		style="background-image: linear-gradient(to right, #6ee7b7, #7dd3fc, #a5b4fc, #f0abfc, #fda4af);"
-		class="flex gap-1.5 place-self-center justify-self-start rounded-lg px-1.5 py-1 text-lighttext transition-transform hover:scale-90 sm:py-1.5"
+		class="flex gap-1.5 place-self-center justify-self-start rounded-lg px-1.5 py-1 text-lighttext transition-transform hover:scale-95 sm:py-1.5"
 	>
 		<Hammer class="h-5 w-5" /><Heart class="h-5 w-5" />
 	</a>
 	<WebsiteIcon />
 	<button
 		on:click={toggleTheme}
-		class="place-self-center justify-self-end rounded-lg bg-darkbg px-2 py-1 text-darktext transition-transform hover:scale-90 sm:p-1.5 dark:bg-lightbg dark:text-lighttext"
+		class="place-self-center justify-self-end rounded-lg bg-darkbg px-2 py-1 text-darktext transition-transform hover:scale-95 sm:p-1.5 dark:bg-lightbg dark:text-lighttext"
 		aria-label="Toggle theme"
 	>
 		{#if $theme === 'light'}
@@ -69,14 +69,14 @@
 		<button
 			on:click={toggleProjects}
 			style="background-image: linear-gradient(to right, #6ee7b7, #7dd3fc, #a5b4fc, #f0abfc, #fda4af);"
-			class="flex gap-1.5 rounded-lg px-1.5 py-1 text-lighttext transition-transform hover:scale-90"
+			class="flex gap-1.5 rounded-lg px-1.5 py-1 text-lighttext transition-transform hover:scale-95"
 			aria-label="Toggle projects"
 		>
 			<Hammer class="h-4 w-4" /><Heart class="h-4 w-4" />
 		</button>
 		<button
 			on:click={toggleTheme}
-			class="rounded-lg bg-darkbg p-1 text-darktext transition-transform hover:scale-90 dark:bg-lightbg dark:text-lighttext"
+			class="rounded-lg bg-darkbg p-1 text-darktext transition-transform hover:scale-95 dark:bg-lightbg dark:text-lighttext"
 			aria-label="Toggle theme"
 		>
 			{#if $theme === 'light'}
