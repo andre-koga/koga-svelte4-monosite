@@ -33,7 +33,7 @@
 		: ''}"
 >
 	<button
-		class="rounded-lg bg-darkbg px-4 py-1 text-darktext transition-transform hover:scale-95 dark:bg-lightbg dark:text-lighttext"
+		class="rounded-lg border-2 border-lightbg bg-darkbg px-4 py-1 text-darktext transition-transform hover:scale-95 dark:border-darkbg dark:bg-lightbg dark:text-lighttext"
 		on:click={scrollToTop}
 		aria-label="Scroll to top"
 	>
