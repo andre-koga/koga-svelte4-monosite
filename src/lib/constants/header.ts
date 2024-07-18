@@ -39,3 +39,9 @@ export const projectLinks: ProjectLink[] = [
 		]
 	}
 ];
+
+export function fetchPagesFromProject(index: number): PageLink[] {
+	if (projectLinks[index].pages === undefined) return [];
+
+	return projectLinks[index].pages;
+}

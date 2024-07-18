@@ -12,8 +12,7 @@
 	import HeaderPageLink from '$ui/HeaderPageLink.svelte';
 
 	// Content
-	import { homePageLinks } from '$constants/header';
-	import { projectLinks } from '$constants/header';
+	import { homePageLinks, projectLinks, fetchPagesFromProject } from '$constants/header';
 
 	// Function to toggle the theme
 	function toggleTheme() {
@@ -24,13 +23,14 @@
 		});
 	}
 
+	let currentProject = -1;
 	let projectsOpen = false;
 </script>
 
 <header
 	class="header relative z-10 grid grid-cols-3 place-items-center gap-6 px-6 pt-12 lowercase sm:gap-8 sm:px-12 md:px-20 md:pt-16"
 >
-	{#if projectsOpen}
+	{#if !projectsOpen}
 		<button
 			on:click={() => (projectsOpen = !projectsOpen)}
 			class="flex gap-1.5 place-self-center justify-self-start rounded-lg bg-gradient-to-r from-gray-300 to-gray-400 px-1.5 py-1 text-lighttext transition-transform hover:scale-95 sm:py-1.5"
@@ -49,24 +49,29 @@
 	<WebsiteIcon />
 	<button
 		on:click={toggleTheme}
-		class="flex gap-1.5 place-self-center justify-self-end rounded-lg bg-darkbg px-1.5 py-1 text-darktext transition-transform hover:scale-95 sm:p-1.5 dark:bg-amber-400 dark:text-lighttext"
+		class="flex gap-1.5 place-self-center justify-self-end rounded-lg bg-amber-400 px-1.5 py-1 text-lighttext transition-transform hover:scale-95 sm:p-1.5 dark:bg-indigo-800 dark:text-darktext"
 		aria-label="Toggle theme"
 	>
-		<Sun class="h-5 w-5 opacity-40 dark:opacity-100" />
-		<Moon class="h-5 w-5 opacity-100 dark:opacity-20" />
+		<Sun class="h-5 w-5 opacity-100 dark:opacity-40" />
+		<Moon class="h-5 w-5 opacity-20 dark:opacity-100" />
 	</button>
 	<pages-menu
 		class="col-span-3 grid w-full grid-cols-2 gap-1.5 rounded-xl bg-darkbg bg-opacity-5 p-1.5 sm:flex sm:flex-wrap dark:bg-lightbg dark:bg-opacity-5"
 	>
 		{#if projectsOpen}
 			{#each projectLinks as { href, text, gradient }, i}
-				<HeaderPageLink {href} {text} {gradient} />
+				<HeaderPageLink {href} {text} {gradient} /> <!--gotta fix this!-->
 			{/each}
-		{:else}
+		{:else if currentProject == -1}
 			{#each homePageLinks as { href, text }, i}
 				<HeaderPageLink {href} {text} gradient={null} />
 			{/each}
+		{:else}
+			{#each fetchPagesFromProject(currentProject) as { href, text }, i}
+				<HeaderPageLink {href} {text} gradient={null} />
+			{/each}
 		{/if}
+		{currentProject}
 	</pages-menu>
 </header>
 
