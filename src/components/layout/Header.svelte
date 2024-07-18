@@ -1,6 +1,8 @@
 <script lang="ts">
+	// Font
+
 	// Icons
-	import { Sun, Moon, Hammer, Heart } from 'lucide-svelte';
+	import { Sun, Moon, Paintbrush, List } from 'lucide-svelte';
 
 	// Stores
 	import { theme } from '$stores/themeStore.js';
@@ -8,12 +10,10 @@
 	// Components
 	import WebsiteIcon from '$ui/WebsiteIcon.svelte';
 	import HeaderPageLink from '$ui/HeaderPageLink.svelte';
-	import ScrollToTop from '$ui/ScrollToTop.svelte';
 
 	// Content
-	import { pageLinks } from '$constants/header';
-	// import { projectLinks } from '$constants/header';
-	// import HeaderProjectLink from '$ui/HeaderProjectLink.svelte';
+	import { homePageLinks } from '$constants/header';
+	import { projectLinks } from '$constants/header';
 
 	// Function to toggle the theme
 	function toggleTheme() {
@@ -23,18 +23,29 @@
 			return newTheme;
 		});
 	}
+
+	let projectsOpen = false;
 </script>
 
 <header
 	class="header relative z-10 grid grid-cols-3 place-items-center gap-6 px-6 pt-12 lowercase sm:gap-8 sm:px-12 md:px-20 md:pt-16"
 >
-	<a
-		href="/projects"
-		style="background-image: linear-gradient(to right, #6ee7b7, #7dd3fc, #a5b4fc, #f0abfc, #fda4af);"
-		class="flex gap-1.5 place-self-center justify-self-start rounded-lg px-1.5 py-1 text-lighttext transition-transform hover:scale-95 sm:py-1.5"
-	>
-		<Hammer class="h-5 w-5" /><Heart class="h-5 w-5" />
-	</a>
+	{#if projectsOpen}
+		<button
+			on:click={() => (projectsOpen = !projectsOpen)}
+			class="flex gap-1.5 place-self-center justify-self-start rounded-lg bg-gradient-to-r from-gray-300 to-gray-400 px-1.5 py-1 text-lighttext transition-transform hover:scale-95 sm:py-1.5"
+		>
+			<Paintbrush class="h-5 w-5 opacity-20" /><List class="h-5 w-5 " />
+		</button>
+	{:else}
+		<button
+			on:click={() => (projectsOpen = !projectsOpen)}
+			style="background-image: linear-gradient(to right, #6ee7b7, #7dd3fc, #a5b4fc, #f0abfc, #fda4af);"
+			class="flex gap-1.5 place-self-center justify-self-start rounded-lg px-1.5 py-1 text-lighttext transition-transform hover:scale-95 sm:py-1.5"
+		>
+			<Paintbrush class="h-5 w-5" /><List class="h-5 w-5 opacity-20" />
+		</button>
+	{/if}
 	<WebsiteIcon />
 	<button
 		on:click={toggleTheme}
@@ -47,9 +58,15 @@
 	<pages-menu
 		class="col-span-3 grid w-full grid-cols-2 gap-1.5 rounded-xl bg-darkbg bg-opacity-5 p-1.5 sm:flex sm:flex-wrap dark:bg-lightbg dark:bg-opacity-5"
 	>
-		{#each pageLinks as { href, text }, i}
-			<HeaderPageLink {href} {text} />
-		{/each}
+		{#if projectsOpen}
+			{#each projectLinks as { href, text, gradient }, i}
+				<HeaderPageLink {href} {text} {gradient} />
+			{/each}
+		{:else}
+			{#each homePageLinks as { href, text }, i}
+				<HeaderPageLink {href} {text} gradient={null} />
+			{/each}
+		{/if}
 	</pages-menu>
 </header>
 
