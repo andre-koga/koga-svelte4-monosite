@@ -19,3 +19,7 @@
 html {
 	scroll-behavior: smooth;
 }
+
+.spacing {
+	@apply px-6 pt-12 sm:gap-8 sm:px-12 md:px-20;
+}

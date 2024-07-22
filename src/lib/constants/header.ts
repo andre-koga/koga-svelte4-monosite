@@ -1,47 +1,63 @@
-type PageLink = {
+export type PageLink = {
 	href: string;
 	text: string;
 };
 
-export const homePageLinks: PageLink[] = [
-	{ href: '/about', text: 'About' },
-	{ href: '/contact', text: 'Contact' }
-];
-
-type ProjectLink = {
-	href: string;
-	text: string;
-	gradient: string[];
-	pages?: PageLink[];
+export interface ProjectLink {
+	[key: string]: {
+		href: string;
+		text: string;
+		gradient: string[];
+	};
 };
 
-export const projectLinks: ProjectLink[] = [
-	{
-		href: '/thoughts',
-		text: 'Thoughts',
-		gradient: ['#FFB085', '#FF75A7', '#FF54D0'],
-		pages: [
-			{ href: '/tech', text: 'Tech' },
-			{ href: '/philosophy', text: 'Philosophy' }
-		]
-	},
-	{
-		href: '/numerus',
-		text: 'Numerus',
-		gradient: ['#EFB32D', '#5b98de'],
-		pages: [
-			{ href: '/algebra', text: 'Algebra' },
-			{ href: '/geometry', text: 'Geometry' },
-			{ href: '/calculus', text: 'Calculus' },
-			{ href: '/statistics', text: 'Statistics' },
-			{ href: '/combinatorics', text: 'Combinatorics' },
-			{ href: '/number-theory', text: 'Number Theory' },
-		]
-	}
-];
-
-export function fetchPagesFromProject(index: number): PageLink[] {
-	if (projectLinks[index].pages === undefined) return [];
-
-	return projectLinks[index].pages;
-}
+export const projectsList = [
+		{
+			title: 'Telefonica',
+			description:
+				'Telefonica is a Spanish multinational telecommunications company. It is one of the largest telephone operators and mobile network providers in the world.',
+			image:
+				'https://cdn.dribbble.com/userupload/12147043/file/original-d42100b50612a622f75874f1b327f414.png?crop=0x0-3201x2401&resize=400x300&vertical=center',
+			link: '/'
+		},
+		{
+			title: 'Telefonica',
+			description:
+				'Telefonica is a Spanish multinational telecommunications company. It is one of the largest telephone operators and mobile network providers in the world.',
+			image:
+				'https://cdn.dribbble.com/userupload/12147043/file/original-d42100b50612a622f75874f1b327f414.png?crop=0x0-3201x2401&resize=400x300&vertical=center',
+			link: '/'
+		},
+		{
+			title: 'Telefonica',
+			description:
+				'Telefonica is a Spanish multinational telecommunications company. It is one of the largest telephone operators and mobile network providers in the world.',
+			image:
+				'https://cdn.dribbble.com/userupload/12147043/file/original-d42100b50612a622f75874f1b327f414.png?crop=0x0-3201x2401&resize=400x300&vertical=center',
+			link: '/'
+		},
+		{
+			title: 'Telefonica',
+			description:
+				'Telefonica is a Spanish multinational telecommunications company. It is one of the largest telephone operators and mobile network providers in the world.',
+			image:
+				'https://cdn.dribbble.com/userupload/12147043/file/original-d42100b50612a622f75874f1b327f414.png?crop=0x0-3201x2401&resize=400x300&vertical=center',
+			link: '/'
+		},
+		{
+			title: 'Telefonica',
+			description:
+				'Telefonica is a Spanish multinational telecommunications company. It is one of the largest telephone operators and mobile network providers in the world.',
+			image:
+				'https://cdn.dribbble.com/userupload/12147043/file/original-d42100b50612a622f75874f1b327f414.png?crop=0x0-3201x2401&resize=400x300&vertical=center',
+			link: '/'
+		},
+		{
+			title: 'Telefonica',
+			description:
+				'Telefonica is a Spanish multinational telecommunications company. It is one of the largest telephone operators and mobile network providers in the world.',
+			image:
+				'https://cdn.dribbble.com/userupload/12147043/file/original-d42100b50612a622f75874f1b327f414.png?crop=0x0-3201x2401&resize=400x300&vertical=center',
+			link: '/'
+		}
+	];

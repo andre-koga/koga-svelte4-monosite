@@ -4,7 +4,7 @@
 </script>
 
 <a
-	class="flex items-center gap-4 mix-blend-difference transition-transform hover:scale-95"
+	class="flex items-center gap-4 px-2 mix-blend-difference transition-transform hover:scale-95"
 	href="/"
 >
 	<p class="hidden font-display text-xl text-lighttext sm:block dark:text-darktext">Andre</p>

@@ -65,33 +65,35 @@
 	});
 </script>
 
-<first-section class="container mx-auto flex h-[75vh] flex-col justify-evenly">
-	<h1
-		class="mx-4 text-center font-display text-3xl font-semibold sm:text-4xl md:text-5xl lg:text-6xl"
-	>
-		some of the most
-		<br />
-		<span
-			class="adjective rounded-full border-2 border-darkbg bg-lightbg px-6 text-4xl leading-[2] sm:text-6xl sm:leading-[2] md:text-7xl md:leading-[2] dark:border-lightbg dark:bg-darkbg"
-			>.....</span
+<div class="spacing mb-20">
+	<first-section class="flex h-[75vh] flex-col justify-evenly">
+		<h1
+			class="mx-4 text-center font-display text-3xl font-semibold sm:text-4xl md:text-5xl lg:text-6xl"
 		>
-		<br />
-		projects live here.
-	</h1>
-	<div class="wobble-motion text-center">
-		<PillLabel bgColor="bg-sky-300" text="curious? scroll down" />
-		<ArrowDown class="mx-auto mt-3" />
-	</div>
-</first-section>
+			some of the most
+			<br />
+			<span
+				class="adjective rounded-full border-2 border-darkbg bg-lightbg px-6 text-4xl leading-[2] sm:text-6xl sm:leading-[2] md:text-7xl md:leading-[2] dark:border-lightbg dark:bg-darkbg"
+				>.....</span
+			>
+			<br />
+			projects live here.
+		</h1>
+		<div class="wobble-motion text-center">
+			<PillLabel bgColor="bg-sky-300" text="curious? scroll down" />
+			<ArrowDown class="mx-auto mt-3" />
+		</div>
+	</first-section>
 
-<second-section class="block px-6">
-	<!-- <image
+	<second-section class="block">
+		<!-- <image
 		class="mx-auto w-1/2"
 		src="https://cdn.dribbble.com/userupload/12147043/file/original-d42100b50612a622f75874f1b327f414.png?crop=0x0-3201x2401&resize=400x300&vertical=center"
 		alt="Telefonica"
 	/> -->
-	<p class="text-center font-display text-lg lowercase sm:text-xl lg:text-2xl">
-		Koga is currently working on...
-	</p>
-	<ProjectCard project={mainProject} />
-</second-section>
+		<p class="mb-4 text-center font-display text-lg lowercase sm:text-xl lg:text-2xl">
+			Koga is currently working on...
+		</p>
+		<ProjectCard project={mainProject} />
+	</second-section>
+</div>
