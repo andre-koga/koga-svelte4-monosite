@@ -1,13 +1,12 @@
 <script lang="ts">
 	// Icons
-	import { Sun, Moon, Paintbrush, List } from 'lucide-svelte';
+	import { Sun, Moon, Menu } from 'lucide-svelte';
 
 	// Stores
 	import { theme } from '$stores/themeStore.js';
 
 	// Components
 	import WebsiteIcon from '$ui/WebsiteIcon.svelte';
-	import HeaderPageLink from '$ui/HeaderPageLink.svelte';
 
 	// Function to toggle the theme
 	function toggleTheme() {
@@ -17,35 +16,47 @@
 			return newTheme;
 		});
 	}
+
+	// Function to display the projects
+	let displayProjects = false;
 </script>
 
-<header class="header spacing relative z-10 grid grid-cols-3 place-items-center gap-6 lowercase">
+<header class="header spacing relative z-10 grid grid-cols-3 place-items-center gap-4 lowercase">
 	<button
-		on:click={toggleTheme}
-		class="flex gap-1.5 justify-self-start rounded-lg bg-amber-400 px-1.5 py-1 text-lighttext transition-transform hover:scale-95 sm:col-span-1 sm:p-1.5 dark:bg-indigo-800 dark:text-darktext"
-		aria-label="Toggle theme"
+		on:click={() => (displayProjects = !displayProjects)}
+		class="place-self-start rounded-lg bg-darkbg bg-opacity-20 p-1 transition-transform hover:scale-95 sm:p-1.5 dark:bg-lightbg dark:bg-opacity-20"
+		aria-label="Toggle menu"
 	>
-		<Sun class="h-5 w-5 opacity-100 dark:opacity-40" />
-		<Moon class="h-5 w-5 opacity-20 dark:opacity-100" />
+		<Menu class="h-5 w-5" />
 	</button>
 	<WebsiteIcon />
-	<a
-		href="/projects"
-		style="background-image: linear-gradient(to right, #6ee7b7, #7dd3fc, #a5b4fc, #f0abfc, #fda4af);"
-		class="flex gap-1.5 justify-self-end rounded-lg px-1.5 py-1 text-lighttext transition-transform hover:scale-95 sm:py-1.5"
+	<button
+		on:click={toggleTheme}
+		class="place-self-end rounded-lg bg-amber-400 p-1 text-lighttext transition-transform hover:scale-95 sm:p-1.5 dark:bg-indigo-800 dark:text-darktext"
+		aria-label="Toggle theme"
 	>
-		<List class="h-5 w-5" />
-		<Paintbrush class="h-5 w-5" />
-	</a>
-	<anchors-menu
-		class="col-span-3 grid w-full grid-cols-2 gap-1.5 rounded-xl bg-darkbg bg-opacity-5 p-1.5 sm:flex sm:flex-wrap dark:bg-lightbg dark:bg-opacity-5"
-	>
-		ble
-		<!-- put all h1's from this page in here -->
-	</anchors-menu>
+		<Sun class="block h-5 w-5 dark:hidden" />
+		<Moon class="hidden h-5 w-5 dark:block" />
+	</button>
 </header>
+
+<aside class="relative z-10 px-6 sm:px-12 md:px-20 {displayProjects ? 'show-aside' : 'hide-aside'}">
+	hey!
+</aside>
 
 <gradient class="absolute left-0 top-0 h-6 w-full bg-lightbg dark:bg-darkbg"> </gradient>
 <gradient
 	class="absolute left-0 top-6 h-[40vh] w-full bg-gradient-to-b from-lightbg to-transparent dark:from-darkbg"
 ></gradient>
+
+<style>
+	.show-aside {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.hide-aside {
+		opacity: 0;
+		pointer-events: none;
+	}
+</style>
