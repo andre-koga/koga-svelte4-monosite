@@ -56,7 +56,7 @@
 				class="rounded-lg px-2 text-lighttext transition-transform hover:scale-95"
 				href="https://th.andrekoga.com"
 			>
-				thoughts
+				thoughtx
 			</a>
 			<a
 				style="background:linear-gradient(to right, #DC4C3B, #EF8E2D, #FFB830);"

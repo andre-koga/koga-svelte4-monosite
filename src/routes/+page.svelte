@@ -8,11 +8,11 @@
 	import PillLabel from '$ui/PillLabel.svelte';
 
 	let mainProject = {
-		title: 'Telefonica',
+		title: 'Thoughtx',
 		description:
-			'Telefonica is a Spanish multinational telecommunications company. It is one of the largest telephone operators and mobile network providers in the world.',
+			'Community-driven platform for sharing poems, stories, and thoughts. A place where you can read, write, and connect with others.',
 		image:
-			'https://cdn.dribbble.com/userupload/12147043/file/original-d42100b50612a622f75874f1b327f414.png?crop=0x0-3201x2401&resize=400x300&vertical=center',
+			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Dw7-4lVfRq74_YEiPEt4e-bQ0_6UA2y73Q&s',
 		link: '/'
 	};
 
@@ -96,4 +96,8 @@
 		</p>
 		<ProjectCard project={mainProject} />
 	</second-section>
+
+	<third-section>
+		<p>want to see other projects?</p>
+	</third-section>
 </div>
