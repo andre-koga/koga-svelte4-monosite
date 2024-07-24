@@ -4,6 +4,9 @@
 
 /* customize the scrollbar */
 ::-webkit-scrollbar {
+	height: 2px;
+}
+::-webkit-scrollbar {
 	width: 12px;
 }
 ::-webkit-scrollbar-track {

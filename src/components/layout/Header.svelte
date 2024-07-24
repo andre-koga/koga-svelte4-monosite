@@ -1,16 +1,17 @@
 <script lang="ts">
 	// Icons
-	import { Sun, Moon, Menu } from 'lucide-svelte';
+	import { Sun, Moon, Menu, Home, MessageCircle, Sigma } from 'lucide-svelte';
 
 	// Stores
 	import { theme } from '$stores/themeStore.js';
 
 	// Components
 	import WebsiteIcon from '$ui/WebsiteIcon.svelte';
+	import HeaderTab from '$ui/HeaderTab.svelte';
 
 	// Function to toggle the theme
 	function toggleTheme() {
-		displayProjects = false;
+		displayMenu = false;
 		theme.update((current) => {
 			const newTheme = current === 'light' ? 'dark' : 'light';
 			document.documentElement.setAttribute('data-theme', newTheme);
@@ -18,13 +19,23 @@
 		});
 	}
 
-	// Function to display the projects
-	let displayProjects = false;
+	// Function to display the menu
+	let displayMenu = false;
 </script>
+
+<tabs
+	class="relative z-50 flex flex-nowrap gap-1 overflow-x-auto overflow-y-hidden bg-stone-200 px-2 py-1 lowercase dark:bg-gray-800"
+>
+	<HeaderTab url="/" title="home"><Home class="h-3 w-3 sm:h-4 sm:w-4" /></HeaderTab>
+	<HeaderTab url="/thoughtx" title="thoughtx"
+		><MessageCircle class="h-3 w-3 sm:h-4 sm:w-4" /></HeaderTab
+	>
+	<HeaderTab url="/numerus" title="numerus"><Sigma class="h-3 w-3 sm:h-4 sm:w-4" /></HeaderTab>
+</tabs>
 
 <header class="header spacing relative z-10 grid grid-cols-3 place-items-center gap-4 lowercase">
 	<button
-		on:click={() => (displayProjects = !displayProjects)}
+		on:click={() => (displayMenu = !displayMenu)}
 		class="place-self-start rounded-lg bg-darkbg bg-opacity-20 p-1 transition-transform hover:scale-95 sm:p-1.5 dark:bg-lightbg dark:bg-opacity-20"
 		aria-label="Toggle menu"
 	>
@@ -42,11 +53,11 @@
 </header>
 
 <aside
-	class="relative z-10 mx-6 mt-8 grid grid-cols-2 gap-4 overflow-hidden transition-all sm:mx-12 sm:grid-cols-4 md:mx-20 md:grid-cols-5 lg:grid-cols-6 {displayProjects
+	class="relative z-10 mx-6 mt-8 grid grid-cols-2 gap-4 overflow-hidden transition-all sm:mx-12 sm:grid-cols-4 md:mx-20 md:grid-cols-5 lg:grid-cols-6 {displayMenu
 		? 'show-aside'
 		: 'hide-aside'}"
 >
-	<div
+	<!-- <div
 		class="flex flex-col gap-3 rounded-xl border border-darkbg border-opacity-20 bg-lightbg p-4 dark:border-lightbg dark:border-opacity-20 dark:bg-darkbg"
 	>
 		<p class="font-bold">Projects</p>
@@ -66,7 +77,7 @@
 				numerus
 			</a>
 		</projects>
-	</div>
+	</div> -->
 	<div
 		class="flex flex-col gap-3 rounded-xl border border-darkbg border-opacity-20 bg-lightbg p-4 dark:border-lightbg dark:border-opacity-20 dark:bg-darkbg"
 	>
