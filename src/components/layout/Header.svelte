@@ -26,11 +26,9 @@
 <tabs
 	class="relative z-50 flex flex-nowrap gap-1 overflow-x-auto overflow-y-hidden bg-stone-200 px-2 py-1 lowercase dark:bg-gray-800"
 >
-	<HeaderTab url="/" title="home"><Home class="h-3 w-3 sm:h-4 sm:w-4" /></HeaderTab>
-	<HeaderTab url="/thoughtx" title="thoughtx"
-		><MessageCircle class="h-3 w-3 sm:h-4 sm:w-4" /></HeaderTab
-	>
-	<HeaderTab url="/numerus" title="numerus"><Sigma class="h-3 w-3 sm:h-4 sm:w-4" /></HeaderTab>
+	<HeaderTab url="/" title="home"><Home class="h-4 w-4" /></HeaderTab>
+	<HeaderTab url="/thoughtx" title="thoughtx"><MessageCircle class="h-4 w-4" /></HeaderTab>
+	<HeaderTab url="/numerus" title="numerus"><Sigma class="h-4 w-4" /></HeaderTab>
 </tabs>
 
 <header class="header spacing relative z-10 grid grid-cols-3 place-items-center gap-4 lowercase">
