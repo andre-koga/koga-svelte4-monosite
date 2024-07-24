@@ -34,10 +34,12 @@
 <header class="header spacing relative z-10 grid grid-cols-3 place-items-center gap-4 lowercase">
 	<button
 		on:click={() => (displayMenu = !displayMenu)}
-		class="place-self-start rounded-lg bg-darkbg bg-opacity-20 p-1 transition-transform hover:scale-95 sm:p-1.5 dark:bg-lightbg dark:bg-opacity-20"
+		class="place-self-start rounded-lg bg-darkbg p-1 transition-transform hover:scale-95 sm:p-1.5 dark:bg-lightbg {displayMenu
+			? ''
+			: 'bg-opacity-20 dark:bg-opacity-20'}"
 		aria-label="Toggle menu"
 	>
-		<Menu class="h-5 w-5" />
+		<Menu class="h-5 w-5 {displayMenu ? 'text-darktext dark:text-lighttext' : ''}" />
 	</button>
 	<WebsiteIcon />
 	<button
@@ -50,8 +52,12 @@
 	</button>
 </header>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <aside
-	class="relative z-10 mx-6 mt-8 grid grid-cols-2 gap-4 overflow-hidden transition-all sm:mx-12 sm:grid-cols-4 md:mx-20 md:grid-cols-5 lg:grid-cols-6 {displayMenu
+	on:mouseleave={() => (displayMenu = false)}
+	on:click={() => (displayMenu = false)}
+	class="absolute z-10 mx-6 mt-4 grid w-screen grid-cols-2 gap-4 overflow-hidden transition-all sm:mx-12 sm:grid-cols-4 md:mx-20 md:grid-cols-5 lg:grid-cols-6 {displayMenu
 		? 'show-aside'
 		: 'hide-aside'}"
 >
@@ -95,12 +101,12 @@
 
 <style>
 	.show-aside {
-		@apply h-60 opacity-100;
+		@apply opacity-100;
 		pointer-events: auto;
 	}
 
 	.hide-aside {
-		@apply h-0 opacity-0;
+		@apply opacity-0;
 		pointer-events: none;
 	}
 </style>
