@@ -57,7 +57,7 @@
 <aside
 	on:mouseleave={() => (displayMenu = false)}
 	on:click={() => (displayMenu = false)}
-	class="absolute z-10 mx-6 mt-4 grid w-screen grid-cols-2 gap-4 overflow-hidden transition-all sm:mx-12 sm:grid-cols-4 md:mx-20 md:grid-cols-5 lg:grid-cols-6 {displayMenu
+	class="absolute z-10 mx-6 mt-4 grid grid-cols-2 gap-4 overflow-hidden transition-all sm:mx-12 sm:grid-cols-4 md:mx-20 md:grid-cols-5 lg:grid-cols-6 {displayMenu
 		? 'show-aside'
 		: 'hide-aside'}"
 >
@@ -88,8 +88,13 @@
 		<p class="font-bold">Links</p>
 		<links class="flex flex-col gap-1 opacity-70">
 			<a class="underline-offset-2 hover:underline" href="/resume"> resume </a>
-			<a class="underline-offset-2 hover:underline" href="/contact"> contact </a>
-			<a class="underline-offset-2 hover:underline" href="/about"> about </a>
+			<a
+				class="underline-offset-2 hover:underline"
+				target="_blank"
+				href="https://5hlun88awqk.typeform.com/to/qipNI8gu"
+			>
+				contact
+			</a>
 		</links>
 	</div>
 </aside>

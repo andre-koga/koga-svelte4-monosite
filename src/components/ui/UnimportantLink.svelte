@@ -1,32 +1,11 @@
 <script lang="ts">
-	import { gsap } from 'gsap/dist/gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-	import { TextPlugin } from 'gsap/dist/TextPlugin';
-	import { onMount } from 'svelte';
-
-	if (typeof window !== 'undefined') {
-		gsap.registerPlugin(ScrollTrigger, TextPlugin);
-	}
-
-	let linkElement: HTMLElement | null;
-
-	onMount(() => {
-		if (!linkElement) return;
-
-		const underline = linkElement.querySelector('.underline');
-
-		linkElement.addEventListener('mouseenter', () => {
-			gsap.to(underline, { width: '100%', duration: 0.5 });
-		});
-
-		linkElement.addEventListener('mouseleave', () => {
-			gsap.to(underline, { width: 0, duration: 0.5 });
-		});
-	});
+	export let text: string;
+	export let href: string;
+	export let target: string;
 </script>
 
-<a class="rounded px-2 hover:bg-stone-300 dark:hover:bg-gray-700" href="/">
-	Terms
+<a class="rounded px-2 hover:bg-stone-300 dark:hover:bg-gray-700" {target} {href}>
+	{text}
 	<span class="underline"></span>
 </a>
 

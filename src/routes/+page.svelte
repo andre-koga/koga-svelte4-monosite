@@ -65,8 +65,8 @@
 	});
 </script>
 
-<div class="spacing mb-20">
-	<first-section class="flex h-[75vh] flex-col justify-evenly">
+<div class="mb-20">
+	<first-section class="spacing flex h-[75vh] flex-col justify-evenly">
 		<h1
 			class="mx-4 text-center font-display text-3xl font-semibold sm:text-4xl md:text-5xl lg:text-6xl"
 		>
@@ -91,13 +91,12 @@
 		src="https://cdn.dribbble.com/userupload/12147043/file/original-d42100b50612a622f75874f1b327f414.png?crop=0x0-3201x2401&resize=400x300&vertical=center"
 		alt="Telefonica"
 	/> -->
-		<p class="mb-4 text-center font-display text-lg lowercase sm:text-xl lg:text-2xl">
-			Koga is currently working on...
-		</p>
-		<ProjectCard project={mainProject} />
+		<p class="mb-4 px-6 font-display text-xl sm:px-12 sm:text-2xl md:px-20 lg:text-3xl">Projects</p>
+		<projects class="flex gap-8 overflow-x-auto overflow-y-hidden px-6 pb-4 sm:px-12 md:px-20">
+			<ProjectCard project={mainProject} />
+			<ProjectCard project={mainProject} />
+			<ProjectCard project={mainProject} />
+			<ProjectCard project={mainProject} />
+		</projects>
 	</second-section>
-
-	<third-section>
-		<p>want to see other projects?</p>
-	</third-section>
 </div>

@@ -11,12 +11,12 @@
 	<div>
 		<p class="rounded-sm pb-6 font-display text-2xl font-bold">Other Resources</p>
 		<div class="grid grid-cols-2 justify-start gap-4 sm:grid-cols-2 lg:mr-[50%] lg:grid-cols-3">
-			<a href="/">Repository</a>
-			<a href="/">Related Projects</a>
-			<a href="/">Community</a>
-			<a href="/">API Reference</a>
-			<a href="/">Blog</a>
-			<a href="/">Tools and Libraries</a>
+			<a target="_blank" href="https://github.com/andre-koga/koga-svelte4-monosite">Repository</a>
+			<!-- <a href="/">Related Projects</a> -->
+			<!-- <a href="/">Community</a> -->
+			<!-- <a href="/">API Reference</a> -->
+			<!-- <a href="/">Blog</a> -->
+			<a href="/tools">Tools and Libraries</a>
 		</div>
 	</div>
 	<div>
@@ -27,12 +27,15 @@
 			- Albert Einstein
 		</div>
 		<div class="bordered flex flex-wrap justify-around gap-4 py-8 text-sm">
-			<UnimportantLink />
-			<a href="/">Privacy</a>
-			<a href="/">Security</a>
-			<a href="/">Docs</a>
-			<a href="/">Contact</a>
-			<a href="/">Manage Cookies</a>
+			<UnimportantLink text="Terms" href="/terms" target="" />
+			<!-- <a href="/">Privacy</a> -->
+			<!-- <a href="/">Security</a> -->
+			<UnimportantLink
+				text="Contact"
+				href="https://5hlun88awqk.typeform.com/to/qipNI8gu"
+				target="_blank"
+			/>
+			<!-- <a href="/">Manage Cookies</a> -->
 		</div>
 		<p class="pt-4 text-center text-xs lowercase text-stone-500 dark:text-gray-400">
 			Designed and developed by Koga himself.<br />Much love! (●'◡'●)
