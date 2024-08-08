@@ -22,7 +22,7 @@
 
 	<experience class="block">
 		<h2 class="font-display text-2xl md:text-3xl lg:text-4xl">Experience</h2>
-		<p class="text-sm text-gray-400">
+		<p class="text-sm text-gray-600 dark:text-gray-400">
 			I've started and helped a couple startups, some of which have already gone through the funding
 			stage. My biggest project so far is Flow Slides, which is currently in the MVP stage.
 		</p>
@@ -72,7 +72,9 @@
 		</p>
 		<ul class="mt-8 grid gap-4 lg:grid-cols-2">
 			{#each groupedSkills as groupedSkill}
-				<div class="grid gap-2 rounded-lg border bg-lightbg p-4 dark:bg-darkbg">
+				<div
+					class="grid gap-2 rounded-lg border border-darkbg bg-lightbg p-4 dark:border-lightbg dark:bg-darkbg"
+				>
 					<h3 class="font-display text-xl font-bold md:text-2xl lg:text-3xl">
 						{groupedSkill.name}
 					</h3>
@@ -99,7 +101,7 @@
 	<!-- svelte-ignore component-name-lowercase -->
 	<awards class="block">
 		<h2 class="font-display text-2xl md:text-3xl lg:text-4xl">Awards</h2>
-		<p class="text-sm text-gray-400">
+		<p class="text-sm text-gray-600 dark:text-gray-400">
 			I was an mathlete during middle and high school ranked 12th best in Brazil, almost going to
 			the International Math Olympiad, one of the most prestigious math competitions in the world.
 			I've been to international competitions all around, including the best U14 medal in OMR 2015.
