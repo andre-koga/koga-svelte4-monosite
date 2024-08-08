@@ -11,6 +11,7 @@
 	<div>
 		<p class="rounded-sm pb-6 font-display text-2xl font-bold">Other Resources</p>
 		<div class="grid grid-cols-2 justify-start gap-4 sm:grid-cols-2 lg:mr-[50%] lg:grid-cols-3">
+			<a href="/resume">Resume</a>
 			<a target="_blank" href="https://github.com/andre-koga/koga-svelte4-monosite">Repository</a>
 			<!-- <a href="/">Related Projects</a> -->
 			<!-- <a href="/">Community</a> -->
