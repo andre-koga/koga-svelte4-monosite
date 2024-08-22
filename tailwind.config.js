@@ -12,9 +12,9 @@ export default {
 				lighttext: '#000000'
 			},
 			fontFamily: {
-				jet: ['JetBrains Mono', 'sans-serif'],
-				display: ['Bricolage Grotesque', 'sans-serif'],
-				text: ['Inter', 'sans-serif']
+				jet: ['IBM Plex Sans', 'sans-serif'],
+				display: ['IBM Plex Sans', 'sans-serif'],
+				text: ['IBM Plex Sans', 'sans-serif']
 			}
 		}
 	},

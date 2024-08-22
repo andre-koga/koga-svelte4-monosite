@@ -9,7 +9,7 @@
 
 <a href={project.link} class="transition-all hover:scale-[0.98]">
 	<project-card
-		class="relative flex aspect-video w-[75vw] flex-col justify-end rounded-lg bg-cover bg-center text-darktext"
+		class="relative flex aspect-video w-[75vw] flex-col justify-end bg-cover bg-center text-darktext"
 		style="background-image: url({project.image});"
 	>
 		<gradient

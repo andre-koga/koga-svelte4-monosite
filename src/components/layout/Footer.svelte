@@ -9,7 +9,7 @@
 	class="relative flex h-[90vh] flex-col justify-end gap-4 bg-gradient-to-b from-stone-50 to-stone-200 px-4 pb-20 sm:px-12 lg:px-20 dark:from-gray-950 dark:to-gray-800"
 >
 	<div>
-		<p class="rounded-sm pb-6 font-display text-2xl font-bold">Other Resources</p>
+		<p class="pb-6 font-display text-2xl">Other Resources</p>
 		<div class="grid grid-cols-2 justify-start gap-4 sm:grid-cols-2 lg:mr-[50%] lg:grid-cols-3">
 			<a href="/resume">Resume</a>
 			<a target="_blank" href="https://github.com/andre-koga/koga-svelte4-monosite">Repository</a>
@@ -21,9 +21,7 @@
 		</div>
 	</div>
 	<div>
-		<div
-			class="my-6 rounded-lg bg-stone-200 p-8 text-justify font-text text-sm italic dark:bg-gray-800"
-		>
+		<div class="my-6 bg-stone-200 p-8 text-justify font-text text-sm italic dark:bg-gray-800">
 			"The important thing is not to stop questioning. Curiosity has its own reason for existence."
 			- Albert Einstein
 		</div>
