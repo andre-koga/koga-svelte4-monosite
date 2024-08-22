@@ -28,12 +28,12 @@
 
 <!-- Scroll to Top Button -->
 <top-arrow
-	class="scroll-to-top sm:left sticky bottom-6 left-6 z-40 sm:bottom-12 sm:left-12 md:bottom-16 md:left-20 {showButton
+	class="scroll-to-top sm:left sticky bottom-6 left-6 z-40 cursor-none sm:bottom-12 sm:left-12 md:bottom-16 md:left-20 {showButton
 		? 'show'
 		: ''}"
 >
 	<button
-		class="border-2 border-lightbg bg-darkbg px-4 py-1 text-darktext transition-transform hover:scale-95 dark:border-darkbg dark:bg-lightbg dark:text-lighttext"
+		class="cursor-none border-2 border-lightbg bg-darkbg px-4 py-1 text-darktext transition-transform hover:scale-95 dark:border-darkbg dark:bg-lightbg dark:text-lighttext"
 		on:click={scrollToTop}
 		aria-label="Scroll to top"
 	>

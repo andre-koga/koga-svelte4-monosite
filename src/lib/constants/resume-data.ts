@@ -30,7 +30,7 @@ type AwardCategory = {
 
 export const experiences: Experience[] = [
   {
-    title: "Co-Founder at Flow Slides",
+    title: "Co-Founder at Flux Slides",
     description:
       "Git-based presentation tool focused on businesses. Typesetting, easy collaboration, easy management.",
 
@@ -41,7 +41,7 @@ export const experiences: Experience[] = [
   {
     title: "Web Developer at Big Data Big Impact",
     description:
-    "Developed a web app that predicts Parkinson using data analysis and ML.",
+      "Developed a web app that predicts Parkinson using data analysis and ML.",
     date: "September - December 2022",
     tech: ["D3.js", "js/ts", "html/css", "node.js", "express"],
     href: "https://gt-big-data.github.io/#/",
@@ -304,8 +304,8 @@ export const groupedSkills: SkillCategory[] = [
 ];
 
 export const awards: AwardCategory[] = [
-  
-  
+
+
   {
     subject: "Mathematics",
     awards: [

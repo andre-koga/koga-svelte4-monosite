@@ -21,11 +21,19 @@
 		</a>
 	</first-section>
 
+	<education class="mb-10 block">
+		<h2 class="text-center font-display text-2xl md:text-3xl lg:text-4xl">Education</h2>
+		<p class="text-center text-sm text-gray-600 dark:text-gray-400">
+			Currently studying Computer Science at Georgia Tech with a focus on Intelligence and Media. Go
+			Jackets!
+		</p>
+	</education>
+
 	<experience class="block">
 		<h2 class="font-display text-2xl md:text-3xl lg:text-4xl">Experience</h2>
 		<p class="text-sm text-gray-600 dark:text-gray-400">
 			I've started and helped a couple startups, some of which have already gone through the funding
-			stage. My biggest project so far is Flow Slides, which is currently in the MVP stage.
+			stage. My biggest project so far is Flux Slides, which is currently in the MVP stage.
 		</p>
 		<ul class="mt-8 grid gap-4 lg:grid-cols-2">
 			{#each experiences as experience}
@@ -64,11 +72,6 @@
 
 	<skills class="block"
 		><h2 class="font-display text-2xl md:text-3xl lg:text-4xl">Skills</h2>
-		<p class="mt-1.5 text-sm">
-			<span class=" bg-red-400 bg-opacity-40 px-2">proficient</span>
-			<span class=" bg-orange-400 bg-opacity-40 px-2">intermediate</span>
-			<span class=" bg-yellow-400 bg-opacity-40 px-2">novice</span>
-		</p>
 		<ul class="mt-8 grid gap-4 lg:grid-cols-2">
 			{#each groupedSkills as groupedSkill}
 				<div
@@ -77,19 +80,33 @@
 					<h3 class="font-display text-xl md:text-2xl lg:text-3xl">
 						{groupedSkill.name}
 					</h3>
-					<ul class="my-1.5 flex flex-wrap gap-2">
+					<ul class="flex flex-wrap items-center gap-2">
+						<p class="order-1 flex-grow bg-opacity-40 px-2 text-sm">PROFICIENT</p>
 						{#each groupedSkill.skills as skill}
-							{#if skill.level == 1}
-								<p class="order-3 bg-yellow-400 bg-opacity-40 px-2 text-sm">
-									{skill.name}
-								</p>
-							{:else if skill.level == 2}
-								<p class="order-2 bg-orange-400 bg-opacity-40 px-2 text-sm">
-									{skill.name}
-								</p>{:else if skill.level == 3}
-								<p class="order-1 bg-red-400 bg-opacity-40 px-2 text-sm">
+							{#if skill.level == 3}
+								<p class="order-1 bg-red-400 bg-opacity-80 px-2 text-sm text-black">
 									{skill.name}
 								</p>{/if}
+						{/each}
+					</ul>
+					<ul class="flex flex-wrap items-center gap-2">
+						<p class="order-1 flex-grow bg-opacity-40 px-2 text-sm">INTERMEDIATE</p>
+						{#each groupedSkill.skills as skill}
+							{#if skill.level == 2}
+								<p class="order-2 bg-orange-400 bg-opacity-80 px-2 text-sm text-black">
+									{skill.name}
+								</p>
+							{/if}
+						{/each}
+					</ul>
+					<ul class="flex flex-wrap items-center gap-2">
+						<p class="order-1 flex-grow bg-opacity-40 px-2 text-sm">NOVICE</p>
+						{#each groupedSkill.skills as skill}
+							{#if skill.level == 1}
+								<p class="order-3 bg-yellow-400 bg-opacity-80 px-2 text-sm text-black">
+									{skill.name}
+								</p>
+							{/if}
 						{/each}
 					</ul>
 				</div>
@@ -145,7 +162,7 @@
 									{/if}
 									{#if award.prize == 'gold'}
 										<p
-											class=" bg-yellow-300 bg-opacity-50 px-2 text-center text-sm uppercase dark:bg-yellow-400 dark:bg-opacity-50"
+											class=" bg-yellow-300 bg-opacity-70 px-2 text-center text-sm uppercase text-black dark:bg-yellow-400 dark:bg-opacity-70"
 										>
 											{award.prize}
 										</p>
@@ -210,7 +227,7 @@
 									{/if}
 									{#if award.prize == 'gold'}
 										<p
-											class=" bg-yellow-300 bg-opacity-50 px-2 text-center text-sm uppercase dark:bg-yellow-400 dark:bg-opacity-50"
+											class=" bg-yellow-300 bg-opacity-70 px-2 text-center text-sm uppercase text-black dark:bg-yellow-400 dark:bg-opacity-70"
 										>
 											{award.prize}
 										</p>
