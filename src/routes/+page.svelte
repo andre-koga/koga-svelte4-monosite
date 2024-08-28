@@ -185,7 +185,7 @@
 	<second-section
 		class="relative mx-4 my-24 flex min-h-[80vh] flex-col justify-between overflow-hidden sm:mx-12"
 	>
-		<h1 class="text-shadow text-right text-5xl sm:text-8xl">
+		<h1 class="dark:text-shadow text-right text-5xl sm:text-8xl">
 			Exploration<br />is my middle<br />name
 		</h1>
 		<img class="pic pic-1 w-60 rotate-2" src="/pic-1.png" alt="me" />

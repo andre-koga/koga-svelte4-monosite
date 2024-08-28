@@ -36,7 +36,7 @@
 	>
 		<button
 			on:click={toggleTheme}
-			class="bg-amber-400 p-1 text-lighttext transition-transform hover:scale-95 sm:p-1.5 dark:bg-indigo-800 dark:text-darktext"
+			class="cursor-none bg-amber-400 p-1 text-lighttext transition-transform hover:scale-95 sm:p-1.5 dark:bg-indigo-800 dark:text-darktext"
 			aria-label="Toggle theme"
 		>
 			<Sun class="block h-4 w-4 dark:hidden" />
