@@ -15,6 +15,13 @@
 		link: 'https://flux-slides.vercel.app/'
 	};
 
+	let poemsProject = {
+		title: 'Thoughts',
+		description: 'Poems and thoughts written by me with automatic dynamic background',
+		image: '/poems.png',
+		link: 'https://th.andrekoga.com/'
+	};
+
 	// lucide down arrow
 	import { ArrowDown } from 'lucide-svelte';
 
@@ -212,9 +219,14 @@
 		src="https://cdn.dribbble.com/userupload/12147043/file/original-d42100b50612a622f75874f1b327f414.png?crop=0x0-3201x2401&resize=400x300&vertical=center"
 		alt="Telefonica"
 	/> -->
-		<p class="mb-4 px-6 font-display text-xl sm:px-12 sm:text-2xl md:px-20 lg:text-3xl">Projects</p>
+		<p class="mb-4 px-6 font-display text-xl sm:px-12 sm:text-2xl md:px-20 lg:text-3xl">
+			Projects <span class="hidden text-sm text-gray-500 sm:inline-block dark:text-gray-400"
+				>(shift-scroll to see more projects)</span
+			>
+		</p>
 		<projects class="flex gap-8 overflow-x-auto overflow-y-hidden px-6 pb-4 sm:px-12 md:px-20">
 			<ProjectCard project={mainProject} />
+			<ProjectCard project={poemsProject} />
 		</projects>
 	</section>
 </div>
