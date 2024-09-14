@@ -13,10 +13,10 @@
 		<h1 class="mx-4 text-center font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
 			Resume
 		</h1>
-		<a class="text-center" href="/resume.pdf">
+		<a class="text-center" href="/Andre_Koga_2024_Resume.pdf">
 			<PillLabel
 				bgColor="border dark:border-lightbg border-darkbg hover:scale-95 transition-all"
-				text="check my one-pager here! (outdated)"
+				text="check my 2024 resume here!"
 			/>
 		</a>
 	</first-section>
