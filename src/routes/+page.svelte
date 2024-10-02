@@ -22,6 +22,14 @@
 		link: 'https://th.andrekoga.com/'
 	};
 
+	let codePartyProject = {
+		title: 'CodeParty(💫)',
+		description:
+			'Code Party is an open-source platform designed to help developers compare different programming languages',
+		image: '/codeparty.png',
+		link: 'https://www.codeparty.dev/'
+	};
+
 	// lucide down arrow
 	import { ArrowDown } from 'lucide-svelte';
 
@@ -225,6 +233,7 @@
 			>
 		</p>
 		<projects class="flex gap-8 overflow-x-auto overflow-y-hidden px-6 pb-4 sm:px-12 md:px-20">
+			<ProjectCard project={codePartyProject} />
 			<ProjectCard project={mainProject} />
 			<ProjectCard project={poemsProject} />
 		</projects>
